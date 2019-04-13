@@ -2,7 +2,7 @@
   let passengerId = 0;
   let tripId = 0;
   let store = { drivers: [], passengers: [], trips: [] };
-  
+
 class Driver {
 
     constructor(name) {
@@ -53,9 +53,8 @@ class Trip {
 
 
   driver() {
-    return store.drivers.find(driver => {
-      return driver.id === this.driverId;
-    });
+    return store.drivers.find(driver => driver.id === this.driverId);
+  
   }
 
   passenger() {
