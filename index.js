@@ -35,9 +35,11 @@ class Passenger {
       store.passengers.push(this);
   }
   trips() {
-    return store.trips.filter( dri => dri.tripId === this.passengerId).bind(this);
+    return store.trips.filter( dri => dri.tripId === this.passengerId);
  }
+
  
+
   drivers(){
     return this.trips().map(trip => {
       return trip.driver();
