@@ -11,7 +11,11 @@ class Driver {
     }
 
     trips() {
-      return this.trips;
+    return store.drivers.filter(
+      function(d) {
+        return d.userId === this.id;
+      }.bind(this)
+    );
     }
 
     passengers(){
