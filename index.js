@@ -21,7 +21,7 @@ class Driver {
     passengers(){
       return store.trips.find(
         function(dri) {
-        return dri.tripId === this.driverId;
+        return dri.driverId;
         }.bind(this)
       );
     }
@@ -54,13 +54,17 @@ class Trip {
       store.trips.push(this);
   }
 
-  driver(){
-    dri = Driver.find(driverId);
-    return dri.name;
+
+  driver() {
+    return store.drivers.find(driver => {
+      return driver.id === this.driverId;
+    });
   }
-  passenger(){
-    pass = Passenger.find(passengerId);
-    return pass.name;
-  }
+
+  passenger() {
+    return store.passengers.find(passenger => {
+      return passenger.id === this.passengerId;
+      });
+    }
 
 }
