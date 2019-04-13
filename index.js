@@ -42,6 +42,12 @@ class Passenger {
     );
   }
 
+      passengers(){
+        return this.trips().map(trip => {
+          return trip.driver();
+      });
+      }
+
 }
 
 
