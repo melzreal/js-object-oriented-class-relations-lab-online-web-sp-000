@@ -42,7 +42,7 @@ class Trip {
 
   driver(){
     dri = Driver.find(driverId);
-    return dri.id;
+    return dri.name;
   }
   passenger(){
     pass = Passenger.find(passengerId);
