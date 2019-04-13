@@ -11,7 +11,7 @@ class Driver {
     passengers(){
       return this.passengers.count();
     }
-    
+
 }
 
 class Passenger {
@@ -21,7 +21,7 @@ class Passenger {
       this.name = name;
   }
 
-  
+
 }
 
 
@@ -40,5 +40,5 @@ class Trip {
     pass = Passenger.find(passengerId);
     return pass.name;
   }
-  
+
 }
