@@ -19,12 +19,11 @@ class Driver {
     }
 
     passengers(){
-      return store.trips.find(
-        function(dri) {
-        return dri.driverId;
-        }.bind(this)
-      );
+      return this.trips().map(trip => {
+        return trip.passenger();
+    });
     }
+
 
 }
 
