@@ -11,11 +11,11 @@ class Driver {
     }
 
     trips() {
-      return this.trips.count();
+      return this.trips;
     }
 
     passengers(){
-      return this.passengers.count();
+      return this.passengers;
     }
 
 }
