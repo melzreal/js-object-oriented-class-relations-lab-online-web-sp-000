@@ -2,6 +2,7 @@
   let passengerId = 0;
   let tripId = 0;
   let store = { drivers: [], passengers: [], trips: [] };
+  
 class Driver {
 
     constructor(name) {
@@ -17,7 +18,6 @@ class Driver {
     passengers(){
       return this.trips().map(trip => trip.passenger() );
     }
-
 
 }
 
