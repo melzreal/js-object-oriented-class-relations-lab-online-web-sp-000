@@ -21,7 +21,7 @@ class Driver {
     passengers(){
       return store.trips.find(
         function(dri) {
-        return dri.tripId === this.passengerId;
+        return dri.tripId === this.driverId;
         }.bind(this)
       );
     }
